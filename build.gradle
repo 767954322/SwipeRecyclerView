@@ -20,6 +20,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //BaseRecyclerViewAdapterHelper （2）
+        maven { url "https://jitpack.io" }
     }
 }
 
