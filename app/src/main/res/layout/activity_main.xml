@@ -10,25 +10,25 @@
         android:id="@+id/bt_page_flush"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bt_test"
+        android:layout_above="@+id/bt_multi_loader"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:text="页面刷新" />
+        android:text="只有刷新" />
 
     <Button
-        android:id="@+id/bt_test"
+        android:id="@+id/bt_multi_loader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="test" />
+        android:text="多布局的刷新加载" />
 
     <Button
-        android:id="@+id/bt_loader_flush"
+        android:id="@+id/bt_single_loader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bt_test"
+        android:layout_below="@+id/bt_multi_loader"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="刷新加载" />
+        android:text="单布局的刷新加载" />
 
 </RelativeLayout>

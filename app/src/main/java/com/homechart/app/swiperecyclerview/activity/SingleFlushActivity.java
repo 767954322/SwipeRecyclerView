@@ -19,10 +19,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
+ * 单布局
  * Created by gumenghao on 2018/4/24.
  */
 
-public class LoaderFlushActivity
+public class SingleFlushActivity
         extends BaseActivity
         implements SwipeRefreshLayout.OnRefreshListener,
         BaseQuickAdapter.RequestLoadMoreListener {

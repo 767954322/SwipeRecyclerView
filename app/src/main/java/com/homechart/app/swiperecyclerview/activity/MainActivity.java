@@ -16,10 +16,10 @@ public class MainActivity extends BaseActivity {
 
     @BindView(R.id.bt_page_flush)
     Button btPageFlush;
-    @BindView(R.id.bt_loader_flush)
+    @BindView(R.id.bt_single_loader)
     Button btLoaderFlush;
-    @BindView(R.id.bt_test)
-    Button bt_test;
+    @BindView(R.id.bt_multi_loader)
+    Button bt_multi_loader;
 
     @Override
     protected int getLayoutResId() {
@@ -31,19 +31,20 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.bt_page_flush, R.id.bt_loader_flush, R.id.bt_test})
+    @OnClick({R.id.bt_page_flush, R.id.bt_single_loader, R.id.bt_multi_loader})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_page_flush:
-                Intent intentPage = new Intent(this,PageFlushActivity.class);
+                Intent intentPage = new Intent(this, PageFlushActivity.class);
                 startActivity(intentPage);
                 break;
-            case R.id.bt_loader_flush:
-                Intent intentLoader = new Intent(this,LoaderFlushActivity.class);
-                startActivity(intentLoader);
+            case R.id.bt_single_loader:
+                Intent intentSingleLoader = new Intent(this, SingleFlushActivity.class);
+                startActivity(intentSingleLoader);
                 break;
-            case R.id.bt_test:
-                Toast.makeText(MainActivity.this, "test", Toast.LENGTH_LONG).show();
+            case R.id.bt_multi_loader:
+                Intent intentMultiLoader = new Intent(this, MultiFlushActivity.class);
+                startActivity(intentMultiLoader);
                 break;
         }
     }

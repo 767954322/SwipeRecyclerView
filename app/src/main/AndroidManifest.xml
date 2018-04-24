@@ -18,7 +18,8 @@
         </activity>
 
         <activity android:name=".activity.PageFlushActivity" />
-        <activity android:name=".activity.LoaderFlushActivity" />
+        <activity android:name=".activity.SingleFlushActivity" />
+        <activity android:name=".activity.MultiFlushActivity" />
     </application>
 
 </manifest>
