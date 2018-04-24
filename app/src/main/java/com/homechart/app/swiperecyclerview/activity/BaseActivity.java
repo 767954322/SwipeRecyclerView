@@ -1,4 +1,4 @@
-package com.homechart.app.swiperecyclerview;
+package com.homechart.app.swiperecyclerview.activity;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 
+import com.homechart.app.swiperecyclerview.R;
 import com.jaeger.library.StatusBarUtil;
 
 

@@ -1,4 +1,4 @@
-package com.homechart.app.swiperecyclerview;
+package com.homechart.app.swiperecyclerview.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,9 +7,9 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.homechart.app.swiperecyclerview.R;
 import com.homechart.app.swiperecyclerview.adapter.LoaderFlushAdapter;
 
 import java.util.ArrayList;

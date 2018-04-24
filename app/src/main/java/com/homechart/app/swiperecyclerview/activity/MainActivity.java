@@ -1,10 +1,12 @@
-package com.homechart.app.swiperecyclerview;
+package com.homechart.app.swiperecyclerview.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.homechart.app.swiperecyclerview.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

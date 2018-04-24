@@ -1,4 +1,4 @@
-package com.homechart.app.swiperecyclerview;
+package com.homechart.app.swiperecyclerview.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -6,6 +6,8 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
+
+import com.homechart.app.swiperecyclerview.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
