@@ -10,27 +10,25 @@
         android:id="@+id/bt_page_flush"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bt_loader_flush"
-        android:layout_alignStart="@+id/bt_loader_flush"
-        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/bt_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:text="页面刷新" />
-
-    <Button
-        android:id="@+id/bt_loader_flush"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/bt_test"
-        android:layout_alignTop="@+id/bt_test"
-        android:layout_marginTop="85dp"
-        android:text="刷新加载" />
 
     <Button
         android:id="@+id/bt_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="212dp"
+        android:layout_centerInParent="true"
         android:text="test" />
+
+    <Button
+        android:id="@+id/bt_loader_flush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="刷新加载" />
 
 </RelativeLayout>
