@@ -11,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.homechart.app.swiperecyclerview.R;
 import com.homechart.app.swiperecyclerview.adapter.LoaderFlushAdapter;
+import com.homechart.app.swiperecyclerview.adapter.MultiFlushAdapter;
+import com.homechart.app.swiperecyclerview.entity.DataEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,12 +38,12 @@ public class MultiFlushActivity
 
     private int tagID = 0;
     private LinearLayoutManager mLayoutManager;
-    private LoaderFlushAdapter mLoaderFlushAdapter;
-    private List<String> dataList = new ArrayList<>();
+    private MultiFlushAdapter mMultiFlushAdapter;
+    private List<DataEntity> dataList = new ArrayList<>();
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.activity_loaderflush;
+        return R.layout.activity_multiflush;
     }
 
 
@@ -53,8 +55,8 @@ public class MultiFlushActivity
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mLoaderFlushAdapter = new LoaderFlushAdapter(R.layout.item_loader_flush, dataList);
-        mRecyclerView.setAdapter(mLoaderFlushAdapter);
+        mMultiFlushAdapter = new MultiFlushAdapter(dataList);
+        mRecyclerView.setAdapter(mMultiFlushAdapter);
         mSrlLoader.setRefreshing(true);
         onRefresh();
 
@@ -64,7 +66,7 @@ public class MultiFlushActivity
     protected void initListener() {
         super.initListener();
         mSrlLoader.setOnRefreshListener(this);
-        mLoaderFlushAdapter.setOnLoadMoreListener(this, mRecyclerView);
+        mMultiFlushAdapter.setOnLoadMoreListener(this, mRecyclerView);
     }
 
     @Override
@@ -75,9 +77,9 @@ public class MultiFlushActivity
     private void refreshData() {
         dataList.clear();
         for (int i = 0; i < 20; i++)
-            dataList.add(i + "");
+            dataList.add(new DataEntity(i % 2, i + ""));
         tagID = 20;
-        mLoaderFlushAdapter.setNewData(dataList);
+        mMultiFlushAdapter.setNewData(dataList);
     }
 
     @Override
@@ -88,11 +90,11 @@ public class MultiFlushActivity
     private void loadData() {
 
         int i = tagID;
-        List<String> loadList = new ArrayList<>();
+        List<DataEntity> loadList = new ArrayList<>();
         for (; i < tagID + 20; i++)
-            loadList.add(i + "");
+            loadList.add(new DataEntity(i % 2, i + ""));
         tagID = loadList.size() + dataList.size();
-        mLoaderFlushAdapter.addData(loadList);
+        mMultiFlushAdapter.addData(loadList);
 
     }
 
@@ -108,9 +110,9 @@ public class MultiFlushActivity
             } else {
                 loadData();
                 if (tagID > 60) {
-                    mLoaderFlushAdapter.loadMoreEnd();
+                    mMultiFlushAdapter.loadMoreEnd();
                 } else {
-                    mLoaderFlushAdapter.loadMoreComplete();
+                    mMultiFlushAdapter.loadMoreComplete();
                 }
             }
 
