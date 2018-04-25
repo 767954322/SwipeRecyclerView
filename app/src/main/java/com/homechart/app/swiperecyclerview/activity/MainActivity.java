@@ -21,6 +21,8 @@ public class MainActivity extends BaseActivity {
     TextView tvLoaderFlush;
     @BindView(R.id.tv_multi_loader)
     TextView tvMultiLoader;
+    @BindView(R.id.tv_addheader)
+    TextView tvAddHeader;
 
     @Override
     protected int getLayoutResId() {
@@ -32,7 +34,7 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.tv_page_flush, R.id.tv_single_loader, R.id.tv_multi_loader})
+    @OnClick({R.id.tv_page_flush, R.id.tv_single_loader, R.id.tv_multi_loader,R.id.tv_addheader})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_page_flush:
@@ -46,6 +48,10 @@ public class MainActivity extends BaseActivity {
             case R.id.tv_multi_loader:
                 Intent intentMultiLoader = new Intent(this, MultiFlushActivity.class);
                 startActivity(intentMultiLoader);
+                break;
+            case R.id.tv_addheader:
+                Intent intentAddHeader = new Intent(this, AddHeaderActivity.class);
+                startActivity(intentAddHeader);
                 break;
         }
     }

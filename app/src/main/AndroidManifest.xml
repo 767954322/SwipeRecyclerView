@@ -20,6 +20,7 @@
         <activity android:name=".activity.PageFlushActivity" />
         <activity android:name=".activity.SingleFlushActivity" />
         <activity android:name=".activity.MultiFlushActivity" />
+        <activity android:name=".activity.AddHeaderActivity" />
     </application>
 
 </manifest>

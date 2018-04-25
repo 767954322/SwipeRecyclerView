@@ -17,7 +17,7 @@
         android:layout_marginRight="55dp"
         android:layout_marginTop="10dp"
         app:cardCornerRadius="12dp"
-        app:cardElevation="12dp">
+        app:cardElevation="6dp">
 
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="只有刷新" />
+            android:text="页面刷新" />
 
     </android.support.v7.widget.CardView>
 
@@ -33,12 +33,12 @@
         android:id="@+id/cv_two"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_below="@+id/cv_one"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="55dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/cv_one"
         app:cardCornerRadius="12dp"
-        app:cardElevation="12dp">
+        app:cardElevation="6dp">
 
         <TextView
             android:id="@+id/tv_multi_loader"
@@ -53,12 +53,12 @@
         android:id="@+id/cv_three"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_below="@+id/cv_two"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="55dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/cv_two"
         app:cardCornerRadius="12dp"
-        app:cardElevation="12dp">
+        app:cardElevation="6dp">
 
         <TextView
             android:id="@+id/tv_single_loader"
@@ -66,6 +66,27 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="单布局的刷新加载" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_four"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/cv_three"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <TextView
+            android:id="@+id/tv_addheader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="添加header" />
 
     </android.support.v7.widget.CardView>
 
