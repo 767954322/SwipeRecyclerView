@@ -6,30 +6,66 @@
     android:layout_height="match_parent"
     tools:context="com.homechart.app.swiperecyclerview.activity.MainActivity">
 
+    <!--app:cardCornerRadius=" "圆角的半径，效果就是上面四个角的弧度-->
+    <!--app:cardElevation=" "阴影大小-->
 
-    <Button
-        android:id="@+id/bt_page_flush"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bt_multi_loader"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:text="只有刷新" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_one"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
 
-    <Button
-        android:id="@+id/bt_multi_loader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="多布局的刷新加载" />
+        <TextView
+            android:id="@+id/tv_page_flush"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="只有刷新" />
 
-    <Button
-        android:id="@+id/bt_single_loader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bt_multi_loader"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="单布局的刷新加载" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_two"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/cv_one"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
+
+        <TextView
+            android:id="@+id/tv_multi_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="多布局的刷新加载" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_three"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/cv_two"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
+
+        <TextView
+            android:id="@+id/tv_single_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="单布局的刷新加载" />
+
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>

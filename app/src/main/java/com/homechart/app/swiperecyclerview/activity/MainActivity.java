@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.homechart.app.swiperecyclerview.R;
@@ -14,12 +15,12 @@ import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.bt_page_flush)
-    Button btPageFlush;
-    @BindView(R.id.bt_single_loader)
-    Button btLoaderFlush;
-    @BindView(R.id.bt_multi_loader)
-    Button bt_multi_loader;
+    @BindView(R.id.tv_page_flush)
+    TextView tvPageFlush;
+    @BindView(R.id.tv_single_loader)
+    TextView tvLoaderFlush;
+    @BindView(R.id.tv_multi_loader)
+    TextView tvMultiLoader;
 
     @Override
     protected int getLayoutResId() {
@@ -31,18 +32,18 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.bt_page_flush, R.id.bt_single_loader, R.id.bt_multi_loader})
+    @OnClick({R.id.tv_page_flush, R.id.tv_single_loader, R.id.tv_multi_loader})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_page_flush:
+            case R.id.tv_page_flush:
                 Intent intentPage = new Intent(this, PageFlushActivity.class);
                 startActivity(intentPage);
                 break;
-            case R.id.bt_single_loader:
+            case R.id.tv_single_loader:
                 Intent intentSingleLoader = new Intent(this, SingleFlushActivity.class);
                 startActivity(intentSingleLoader);
                 break;
-            case R.id.bt_multi_loader:
+            case R.id.tv_multi_loader:
                 Intent intentMultiLoader = new Intent(this, MultiFlushActivity.class);
                 startActivity(intentMultiLoader);
                 break;
