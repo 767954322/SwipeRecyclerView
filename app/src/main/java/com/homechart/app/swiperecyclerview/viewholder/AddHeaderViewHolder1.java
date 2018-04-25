@@ -12,17 +12,16 @@ import butterknife.ButterKnife;
 /**
  * Created by gumenghao on 2018/4/25.
  */
+public class AddHeaderViewHolder1 {
 
-public class AddHeaderViewHolder {
+    @BindView(R.id.cv_header1)
+    public  CardView cvHeader;
+    @BindView(R.id.tv_header1)
+    public  TextView tvHeader;
 
-    @BindView(R.id.cv_header)
-    CardView cvHeader;
-    @BindView(R.id.tv_header)
-    TextView tvHeader;
+    public AddHeaderViewHolder1(View headerRootView) {
 
-    public AddHeaderViewHolder(View headerRootView) {
-
-        ButterKnife.bind(this,headerRootView);
+        ButterKnife.bind(this, headerRootView);
 
 
     }
