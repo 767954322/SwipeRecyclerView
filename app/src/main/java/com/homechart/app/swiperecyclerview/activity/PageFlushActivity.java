@@ -33,6 +33,8 @@ public class PageFlushActivity
     @Override
     protected void initData(Bundle savedInstanceState) {
         ButterKnife.bind(this);
+        srlPager.setRefreshing(true);
+        onRefresh();
     }
 
     @Override
