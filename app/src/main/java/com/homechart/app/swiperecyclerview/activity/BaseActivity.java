@@ -22,9 +22,9 @@ public abstract class BaseActivity extends FragmentActivity {
         setContentView(getLayoutResId());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-            StatusBarUtil.setColor(this, getResources().getColor(R.color.colorWhite),0);
+            StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimaryDark),0);
         }else {
-            StatusBarUtil.setColor(this, getResources().getColor(R.color.colorWhite),0);
+            StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimaryDark),0);
         }
         initExtraBundle();
         initData(savedInstanceState);

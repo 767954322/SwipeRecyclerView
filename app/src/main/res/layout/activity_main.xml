@@ -15,9 +15,10 @@
         android:layout_height="60dp"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="55dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp">
+
 
         <TextView
             android:id="@+id/tv_page_flush"
@@ -34,7 +35,7 @@
         android:layout_height="60dp"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="55dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/cv_one"
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp">
@@ -54,7 +55,7 @@
         android:layout_height="60dp"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="55dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/cv_two"
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp">
