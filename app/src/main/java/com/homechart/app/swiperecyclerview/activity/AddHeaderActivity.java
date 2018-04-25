@@ -111,6 +111,10 @@ public class AddHeaderActivity
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         Toast.makeText(AddHeaderActivity.this, "点击第" + position + "条数据 -> -> "
                 + dataList.get(position), Toast.LENGTH_LONG).show();
+        //滚动到顶部切刷新
+//        mRecyclerView.scrollToPosition(0);
+//        mSrlLoader.setRefreshing(true);
+//        onRefresh();
     }
 
     @Override
