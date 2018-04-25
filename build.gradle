@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
+
     repositories {
         google()
         jcenter()
@@ -21,7 +21,13 @@ allprojects {
         google()
         jcenter()
         //BaseRecyclerViewAdapterHelper （2）
-        maven { url "https://jitpack.io" }
+        maven {
+            url "https://jitpack.io"
+        }
+
+        maven {
+            url "https://maven.google.com"
+        }
     }
 }
 
