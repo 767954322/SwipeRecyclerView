@@ -8,24 +8,17 @@ import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 public class DataEntity implements MultiItemEntity {
 
-    private int itemType;
 
-    private String text;
     public static final int TYOEONE = 0;
     public static final int TYOTWO = 1;
 
-    public DataEntity(int itemType, String text) {
-        this.itemType = itemType;
+    private String text;
+    private InfoBean infoBean;
+
+
+    public DataEntity(String text, InfoBean infoBean) {
         this.text = text;
-    }
-
-    @Override
-    public int getItemType() {
-        return itemType;
-    }
-
-    public void setItemType(int itemType) {
-        this.itemType = itemType;
+        this.infoBean = infoBean;
     }
 
     public String getText() {
@@ -36,4 +29,28 @@ public class DataEntity implements MultiItemEntity {
         this.text = text;
     }
 
+    public InfoBean getInfoBean() {
+        return infoBean;
+    }
+
+    public void setInfoBean(InfoBean infoBean) {
+        this.infoBean = infoBean;
+    }
+
+    @Override
+    public String toString() {
+        return "DataEntity{" +
+                "text='" + text + '\'' +
+                ", infoBean=" + infoBean +
+                '}';
+    }
+
+    @Override
+    public int getItemType() {
+        if (infoBean.getTag().equals("left")) {
+            return TYOEONE;
+        } else {
+            return TYOTWO;
+        }
+    }
 }

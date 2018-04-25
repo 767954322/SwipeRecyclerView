@@ -13,6 +13,7 @@ import com.homechart.app.swiperecyclerview.R;
 import com.homechart.app.swiperecyclerview.adapter.LoaderFlushAdapter;
 import com.homechart.app.swiperecyclerview.adapter.MultiFlushAdapter;
 import com.homechart.app.swiperecyclerview.entity.DataEntity;
+import com.homechart.app.swiperecyclerview.entity.InfoBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,7 +78,7 @@ public class MultiFlushActivity
     private void refreshData() {
         dataList.clear();
         for (int i = 0; i < 20; i++)
-            dataList.add(new DataEntity(i % 2, i + ""));
+            dataList.add(new DataEntity(i + "", new InfoBean("right")));
         tagID = 20;
         mMultiFlushAdapter.setNewData(dataList);
     }
@@ -92,7 +93,7 @@ public class MultiFlushActivity
         int i = tagID;
         List<DataEntity> loadList = new ArrayList<>();
         for (; i < tagID + 20; i++)
-            loadList.add(new DataEntity(i % 2, i + ""));
+            loadList.add(new DataEntity(i + "", new InfoBean("left")));
         tagID = loadList.size() + dataList.size();
         mMultiFlushAdapter.addData(loadList);
 

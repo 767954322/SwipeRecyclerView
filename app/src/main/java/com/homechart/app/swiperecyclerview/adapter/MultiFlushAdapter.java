@@ -7,6 +7,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.homechart.app.swiperecyclerview.R;
 import com.homechart.app.swiperecyclerview.entity.DataEntity;
+import com.homechart.app.swiperecyclerview.entity.InfoBean;
 
 import java.util.List;
 
